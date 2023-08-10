@@ -23,6 +23,7 @@ public String home(){
     @GetMapping(value = "/login")
     public String login(){
        return "login";
+
     }
 
 
@@ -32,7 +33,7 @@ public String home(){
             System.out.println(user);
             System.out.println(password);
             System.out.println(user.getPassword());
-            if(user==null || !user.getPassword().equals(password)){
+            if(  !user.getPassword().equals(password)){
                 return null;
             }
 

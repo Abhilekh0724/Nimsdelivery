@@ -18,15 +18,35 @@ public class SignupController {
     public String signup() {
         return "signup";
     }
+    @GetMapping(value = "/food")
+    public String food() {
+        return "food";
+    }
+    @GetMapping(value = "/clothing")
+    public String clothing() {
+        return "clothing";
+    }
+    @GetMapping(value = "/groceries")
+    public String groceries() {
+        return "groceries";
+    }
+    @GetMapping(value = "/electronics")
+    public String electronics() {
+        return "electronics";
+    }
+
 
     @PostMapping(value = "/getsignupdata")
-    public RedirectView getsignupdata(@RequestParam("fname") String fname, @RequestParam("lname") String lname, @RequestParam("email") String email, @RequestParam("password") String password) {
-        if(fname.length()>2 && lname.length()>2 && email.length()>8 && password.length()>5){
+    public RedirectView getsignupdata(@RequestParam("fullName") String fullName,@RequestParam("phoneNumber") String phoneNumber,@RequestParam("address") String address,@RequestParam("email") String email,@RequestParam("password") String password,@RequestParam("confirmPassword") String confirmPassword,@RequestParam("birthday") String birthday){
+        if(fullName.length()>2 && phoneNumber.length()>2 && address.length()>2 && email.length()>20 && password.length()>10 && confirmPassword.length()>10 && birthday.length()>5){
             Users user=new Users();
-            user.setUser_firstname(fname);
-            user.setUser_lastname(lname);
+            user.setUser_fullName(fullName);
+            user.setPhoneNumber(phoneNumber);
             user.setEmail(email);
             user.setPassword(password);
+            user.setConfirmPassword(confirmPassword);
+            user.setBirthday(birthday);
+
             Users savedData=usersRepository.save(user);
             return new RedirectView("/login");
         }else{
