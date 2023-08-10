@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="icon" th:href="@{/images/Nims.png}" type="image/x-icon">
+    <title>Nimsdelivery - Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url("/images/login.jpg");
+            background-repeat: no-repeat;
+            background-size: 100% auto;
+            background-position: center center;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+            max-width: 400px;
+            margin: 100px auto;
+            padding: 20px;
+            background-color: transparent;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            height: 100vh;
+        }
+        
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #ffffff;
+        }
+        
+        .form-group input {
+            width: 95%;
+            padding: 10px;
+            border-radius: 3px;
+            border: 1px solid #c5c5c5;
+            font-size: 16px;
+        }
+        
+        .form-group button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+        
+        .form-group button:hover {
+            background-color: #45a049;
+            transform: scale(1.05);
+        }
+        
+        .social-login {
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        .social-login button {
+            display: inline-block;
+            width: 150px;
+            padding: 10px;
+            background-color: #3b5998;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+        
+        .social-login button:last-child {
+            margin-right: 0;
+        }
+        
+        .social-login button:hover {
+            background-color: #355089;
+            transform: scale(1.05);
+        }
+        
+        @media screen and (max-width: 1068px) {
+            body {
+                background-size: cover;
+                background-position: center center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 style="font-family: 'Brush Script MT', sans-serif; font-size: 70px; color: #eda8a8;">Nimsdelivery</h1>
+        <form>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="form-group">
+                <button type="submit">Log In</button>
+            </div>
+        </form>
+        <div class="social-login">
+            <button onclick="loginWithFacebook()">Log in with Facebook</button>
+            <button onclick="loginWithGmail()">Log in with Gmail</button>
+        </div>
+        <p style="text-align: center;">Don't have an account? <a href="signup.html">Sign up</a></p>
+    </div>
+</body>
+
+</html>

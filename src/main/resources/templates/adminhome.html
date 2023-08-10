@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="Nims.png" type="image/x-icon">
+    <style>
+        body,
+        h1,
+        h2,
+        h3,
+        p,
+        ul,
+        li {
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #eabdbd;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #615c5c;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            color: #fff;
+        }
+        
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+        
+        .logo {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+        
+        h1 {
+            font-size: 36px;
+        }
+        
+        nav {
+            margin-bottom: 30px;
+        }
+        
+        .admin-menu {
+            list-style: none;
+        }
+        
+        .admin-menu li {
+            margin-bottom: 10px;
+        }
+        
+        .admin-menu a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 20px;
+            transition: color 0.3s;
+        }
+        
+        .admin-menu a:hover {
+            color: #4caf50;
+        }
+        
+        main {
+            margin-bottom: 30px;
+        }
+        
+        .admin-info {
+            text-align: center;
+        }
+        
+        footer {
+            text-align: center;
+        }
+    </style>
+    <title>Admin Dashboard - Nimsdelivery</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <img src="Nims.png" alt="Delivery Service Logo" class="logo">
+            <h1>Nimsdelivery</h1>
+        </header>
+
+        <nav>
+            <ul class="admin-menu">
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="#">Add Items</a></li>
+                <li><a href="#">Delete Items</a></li>
+                <li><a href="#">View Orders</a></li>
+
+            </ul>
+        </nav>
+
+        <main>
+            <section class="admin-info">
+                <h2>Welcome, Admin!</h2>
+                <p>Manage your delivery services efficiently.</p>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2023 Nimsdelivery</p>
+        </footer>
+    </div>
+</body>
+
+</html>
